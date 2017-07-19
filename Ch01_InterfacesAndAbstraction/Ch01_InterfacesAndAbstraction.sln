@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03_Ferrari", "p03_Ferrari\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04_Telephony", "p04_Telephony\p04_Telephony.csproj", "{A4541F41-E234-4A93-8ECA-B153F65B49E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05_BorderControl", "p05_BorderControl\p05_BorderControl.csproj", "{408B8A9D-5A03-4584-A9DF-CA70545BEBCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06_BirthdayCelebrations", "p06_BirthdayCelebrations\p06_BirthdayCelebrations.csproj", "{F5E9D2A3-B71C-44AB-B8D7-0D89BB91EF9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +50,14 @@ Global
 		{A4541F41-E234-4A93-8ECA-B153F65B49E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4541F41-E234-4A93-8ECA-B153F65B49E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4541F41-E234-4A93-8ECA-B153F65B49E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{408B8A9D-5A03-4584-A9DF-CA70545BEBCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408B8A9D-5A03-4584-A9DF-CA70545BEBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408B8A9D-5A03-4584-A9DF-CA70545BEBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408B8A9D-5A03-4584-A9DF-CA70545BEBCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E9D2A3-B71C-44AB-B8D7-0D89BB91EF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E9D2A3-B71C-44AB-B8D7-0D89BB91EF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E9D2A3-B71C-44AB-B8D7-0D89BB91EF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E9D2A3-B71C-44AB-B8D7-0D89BB91EF9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
