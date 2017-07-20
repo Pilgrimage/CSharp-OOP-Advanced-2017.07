@@ -42,11 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Citizen.cs" />
+    <Compile Include="Entities\Pet.cs" />
+    <Compile Include="Entities\Robot.cs" />
+    <Compile Include="Interfaces\IBirthday.cs" />
+    <Compile Include="Interfaces\IHuman.cs" />
+    <Compile Include="Interfaces\IIdable.cs" />
+    <Compile Include="Interfaces\IPet.cs" />
+    <Compile Include="Interfaces\IRobot.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

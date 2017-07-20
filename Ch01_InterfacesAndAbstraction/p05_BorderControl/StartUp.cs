@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using p05_BorderControl.Models;
-
-namespace p05_BorderControl
+﻿namespace p05_BorderControl
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using p05_BorderControl.Models;
 
     public class StartUp
     {

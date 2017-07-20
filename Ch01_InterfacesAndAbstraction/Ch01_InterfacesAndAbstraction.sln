@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab01_Shapes", "lab01_Shape
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C0E4DA1B-EA65-4161-9260-7360C5D6456A}"
 	ProjectSection(SolutionItems) = preProject
-		01.CSOOPAdvanced-Interfaces-And-Abstraction-Exercises.docx = 01.CSOOPAdvanced-Interfaces-And-Abstraction-Exercises.docx
-		01.CSOOPAdvanced-Interfaces-and-Abstraction-Lab.docx = 01.CSOOPAdvanced-Interfaces-and-Abstraction-Lab.docx
-		01.CSOOPAdvanced-Interfaces-And-Abstraction.pptx = 01.CSOOPAdvanced-Interfaces-And-Abstraction.pptx
+		01.CSOOPAdv-Interfaces-And-Abstraction-Exercises.docx = 01.CSOOPAdv-Interfaces-And-Abstraction-Exercises.docx
+		01.CSOOPAdv-Interfaces-and-Abstraction-Lab.docx = 01.CSOOPAdv-Interfaces-and-Abstraction-Lab.docx
+		01.CSOOPAdv-Interfaces-And-Abstraction.pptx = 01.CSOOPAdv-Interfaces-And-Abstraction.pptx
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab02_Cars", "lab02_Cars\lab02_Cars.csproj", "{20B95285-37B6-4AF8-BD6D-A61757354307}"
@@ -23,6 +23,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05_BorderControl", "p05_BorderControl\p05_BorderControl.csproj", "{408B8A9D-5A03-4584-A9DF-CA70545BEBCB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06_BirthdayCelebrations", "p06_BirthdayCelebrations\p06_BirthdayCelebrations.csproj", "{F5E9D2A3-B71C-44AB-B8D7-0D89BB91EF9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p07_FoodShortage", "p07_FoodShortage\p07_FoodShortage.csproj", "{F434C7C5-DF2F-48A6-AD52-130769E2C946}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +60,10 @@ Global
 		{F5E9D2A3-B71C-44AB-B8D7-0D89BB91EF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5E9D2A3-B71C-44AB-B8D7-0D89BB91EF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5E9D2A3-B71C-44AB-B8D7-0D89BB91EF9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F434C7C5-DF2F-48A6-AD52-130769E2C946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F434C7C5-DF2F-48A6-AD52-130769E2C946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F434C7C5-DF2F-48A6-AD52-130769E2C946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F434C7C5-DF2F-48A6-AD52-130769E2C946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
