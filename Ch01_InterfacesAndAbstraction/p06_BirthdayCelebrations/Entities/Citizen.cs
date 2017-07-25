@@ -2,7 +2,6 @@
 {
     public class Citizen : IHuman, IIdable, IBirthday
     {
-
         public Citizen(string name, int age, string id, string birthdate)
         {
             this.Name = name;
@@ -12,13 +11,12 @@
             this.Food = 0;
         }
 
-        public string Name { get; private set; }
-        public int Age { get; private set; }
-        public string Id { get; private set; }
-        public string BirthDate { get; private set; }
+        public string Name { get; }
+        public int Age { get;  }
+        public string Id { get;  }
+        public string BirthDate { get; }
         public int Food { get; private set; }
-
-
+        
         public void BuyFood()
         {
             this.Food += 10;
