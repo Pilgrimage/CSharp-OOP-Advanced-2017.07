@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p11_Tuple", "p11_Tuple\p11_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p12_Threeuple", "p12_Threeuple\p12_Threeuple.csproj", "{17B1EC3D-6B3F-46BA-8359-FA3754EA9CF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p08_CustomList", "p08_CustomList\p08_CustomList.csproj", "{5C0783B6-8A52-4137-A1A3-D5A3B4EE034F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{17B1EC3D-6B3F-46BA-8359-FA3754EA9CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17B1EC3D-6B3F-46BA-8359-FA3754EA9CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17B1EC3D-6B3F-46BA-8359-FA3754EA9CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0783B6-8A52-4137-A1A3-D5A3B4EE034F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0783B6-8A52-4137-A1A3-D5A3B4EE034F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0783B6-8A52-4137-A1A3-D5A3B4EE034F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0783B6-8A52-4137-A1A3-D5A3B4EE034F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
