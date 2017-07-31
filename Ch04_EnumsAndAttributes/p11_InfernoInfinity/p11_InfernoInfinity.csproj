@@ -42,18 +42,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Attributes\CustomClassAttribute.cs" />
+    <Compile Include="Core\CommandInterpreter.cs" />
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="Enums\Clarity.cs" />
+    <Compile Include="Enums\Rarity.cs" />
+    <Compile Include="Interfaces\IGem.cs" />
+    <Compile Include="Interfaces\IStat.cs" />
+    <Compile Include="Interfaces\IWeapon.cs" />
+    <Compile Include="Models\Gems.cs" />
+    <Compile Include="Models\Gems\Amethyst.cs" />
+    <Compile Include="Models\Gems\Emerald.cs" />
+    <Compile Include="Models\Gems\Ruby.cs" />
+    <Compile Include="Models\Stat.cs" />
+    <Compile Include="Models\Weapon.cs" />
+    <Compile Include="Models\Weapons\Axe.cs" />
+    <Compile Include="Models\Weapons\Knife.cs" />
+    <Compile Include="Models\Weapons\Sword.cs" />
+    <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Attributes\" />
-    <Folder Include="Core\" />
-    <Folder Include="Enums\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

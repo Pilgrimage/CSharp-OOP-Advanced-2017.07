@@ -89,7 +89,7 @@
         private static void P06_PrintAttribute()
         {
             string input = Console.ReadLine();
-            Type type = null;
+            //Type type = null;
 
             if (input== "Rank")
             {
@@ -169,7 +169,7 @@
                         Console.WriteLine("Card is not in the deck.");
                     }
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Console.WriteLine("No such card exists.");
                 }

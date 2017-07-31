@@ -1,4 +1,4 @@
-﻿namespace p10_CreateCustomClassAttribute
+﻿namespace p11_InfernoInfinity
 {
     using System;
     using System.Linq;

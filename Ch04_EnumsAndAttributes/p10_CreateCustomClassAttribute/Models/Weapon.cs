@@ -1,4 +1,4 @@
-﻿namespace p10_CreateCustomClassAttribute.Models
+﻿namespace p11_InfernoInfinity.Models
 {
     using Attributes;
 
