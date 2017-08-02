@@ -5,10 +5,13 @@
 
     public class UnitFactory : IUnitFactory
     {
+        private const string UnitNameSpace = "p03_BarracksFactory.Models.Units.";
+
         public IUnit CreateUnit(string unitType)
         {
-            //TODO: implement for Problem 3
-            throw new NotImplementedException();
+            Type typeUnit = Type.GetType(UnitNameSpace + unitType);     // Require FuulName
+            IUnit unitInstance = (IUnit) Activator.CreateInstance(typeUnit);
+            return unitInstance;
         }
     }
 }
