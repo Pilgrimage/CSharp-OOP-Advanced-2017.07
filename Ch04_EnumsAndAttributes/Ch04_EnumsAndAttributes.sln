@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p10_CreateCustomClassAttrib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p11_InfernoInfinity", "p11_InfernoInfinity\p11_InfernoInfinity.csproj", "{A133CE53-CED4-4566-9370-A9ACA6DC59C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xKenovAttributes", "xKenovAttributes\xKenovAttributes.csproj", "{17751D93-2E70-4A77-A129-4D72F164242C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{A133CE53-CED4-4566-9370-A9ACA6DC59C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A133CE53-CED4-4566-9370-A9ACA6DC59C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A133CE53-CED4-4566-9370-A9ACA6DC59C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17751D93-2E70-4A77-A129-4D72F164242C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17751D93-2E70-4A77-A129-4D72F164242C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17751D93-2E70-4A77-A129-4D72F164242C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17751D93-2E70-4A77-A129-4D72F164242C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
