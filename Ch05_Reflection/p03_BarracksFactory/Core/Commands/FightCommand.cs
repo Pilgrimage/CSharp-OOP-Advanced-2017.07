@@ -1,0 +1,17 @@
+﻿namespace p03_BarracksFactory.Core.Commands
+{
+    using System;
+
+    public class FightCommand : Command
+    {
+        public FightCommand(string[] data) : base(data)
+        {
+        }
+
+        public override string Execute()
+        {
+            Environment.Exit(0);
+            return String.Empty;
+        }
+    }
+}
