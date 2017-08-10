@@ -1,0 +1,8 @@
+﻿namespace lab01_StreamProgress
+{
+    public interface IStreamable
+    {
+        int Length { get; }
+        int BytesSent { get; }
+    }
+}

@@ -13,10 +13,8 @@
             this.pinCodeCheck = pinCodeCheck;
         }
 
-        public void Check()
+        public void Check(int option)
         {
-            Console.WriteLine("Choose option: 1 - KeyCard, 2 - PinCode:");
-            int option = int.Parse(Console.ReadLine());
             switch (option)
             {
                 case 1:
@@ -24,6 +22,9 @@
                     break;
                 case 2:
                     Console.WriteLine(this.pinCodeCheck.ValidateUser());
+                    break;
+                default:
+                    Console.WriteLine(Boolean.FalseString);
                     break;
             }
         }

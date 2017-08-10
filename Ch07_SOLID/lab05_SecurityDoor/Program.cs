@@ -8,7 +8,7 @@
             KeyCardCheck keyCardCheck = new KeyCardCheck(scannerUi);
             PinCodeCheck pinCodeCheck = new PinCodeCheck(scannerUi);
             SecurityManager manager = new SecurityManager(keyCardCheck, pinCodeCheck);
-            manager.Check();
+            manager.Check(scannerUi.RequestCheckOption());
     }
 }
 }

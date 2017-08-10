@@ -16,13 +16,8 @@
 
         public override bool ValidateUser()
         {
-            int pin = securityUI.RequestPinCode();
-            if (IsValid(pin))
-            {
-                return true;
-            }
-
-            return false;
+            int pin = this.securityUI.RequestPinCode();
+            return IsValid(pin);
         }
     }
 }

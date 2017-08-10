@@ -16,13 +16,8 @@
 
         public override bool ValidateUser()
         {
-            string code = securityUI.RequestKeyCard();
-            if (IsValid(code))
-            {
-                return true;
-            }
-
-            return false;
+            string code = this.securityUI.RequestKeyCard();
+            return IsValid(code);
         }
     }
 }

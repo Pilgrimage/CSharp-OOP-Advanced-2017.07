@@ -1,6 +1,6 @@
 ﻿namespace lab01_StreamProgress
 {
-    public class File
+    public class File : IStreamable
     {
         private string name;
 

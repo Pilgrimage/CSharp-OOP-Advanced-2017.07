@@ -1,5 +1,6 @@
 ﻿namespace lab03_DetailPrinter
 {
+    using System;
     using System.Collections.Generic;
 
     public class Manager : Employee
@@ -10,5 +11,12 @@
         }
 
         public IReadOnlyCollection<string> Documents { get; set; }
+
+        public override string ToString()
+        {
+
+            return base.ToString() + Environment.NewLine 
+                                   + $"Documents: {string.Join(Environment.NewLine, this.Documents)}";
+        }
     }
 }
