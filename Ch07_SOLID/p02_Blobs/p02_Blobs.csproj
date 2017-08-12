@@ -42,21 +42,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="Core\GameActionsExecutor.cs" />
+    <Compile Include="Core\IO\Reader.cs" />
+    <Compile Include="Core\IO\Writer.cs" />
     <Compile Include="Entities\Attacks\Attack.cs" />
-    <Compile Include="Entities\Attacks\PutridFart.cs" />
+    <Compile Include="Entities\Attacks\BlobplodeAttack.cs" />
+    <Compile Include="Entities\Attacks\Factory\AttackFactory.cs" />
+    <Compile Include="Entities\Attacks\PutridFartAttack.cs" />
+    <Compile Include="Entities\Behaviors\AggressiveBehavior.cs" />
     <Compile Include="Entities\Behaviors\Behavior.cs" />
-    <Compile Include="Entities\Behaviors\Aggressive.cs" />
+    <Compile Include="Entities\Behaviors\Factory\BehaviorFactory.cs" />
+    <Compile Include="Entities\Behaviors\InflatedBehavior.cs" />
     <Compile Include="Entities\Blob.cs" />
     <Compile Include="Interfaces\IAttack.cs" />
     <Compile Include="Interfaces\IBehavior.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Interfaces\IO\IReader.cs" />
+    <Compile Include="Interfaces\IO\IWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
