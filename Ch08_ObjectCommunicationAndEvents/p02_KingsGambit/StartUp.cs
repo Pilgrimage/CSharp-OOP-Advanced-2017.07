@@ -9,6 +9,7 @@ public class StartUp
         List<Soldier> army = new List<Soldier>();
         King king = new King(Console.ReadLine());
 
+        // Initialize RoyalKings
         string[] royalGuards = Console.ReadLine().Split();
         foreach (var royalGuard in royalGuards)
         {
@@ -17,8 +18,9 @@ public class StartUp
             king.UnderAttack += guard.KingUnderAttack;
         }
 
-        string[] footmen = Console.ReadLine().Split();
-        foreach (var footman in footmen)
+        // Initialize FootMans
+        string[] footmans = Console.ReadLine().Split();
+        foreach (var footman in footmans)
         {
             Footman foot = new Footman(footman);
             army.Add(foot);

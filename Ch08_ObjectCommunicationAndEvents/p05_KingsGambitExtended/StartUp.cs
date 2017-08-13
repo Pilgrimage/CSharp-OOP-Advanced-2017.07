@@ -6,8 +6,6 @@ public class StartUp
 {
     public static void Main(string[] args)
     {
-        // Unextended !!!
-
         List<Soldier> army = new List<Soldier>();
         King king = new King(Console.ReadLine());
 
@@ -35,8 +33,15 @@ public class StartUp
             {
                 case "Kill":
                     Soldier soldier = army.FirstOrDefault(s => s.Name == command[1]);
-                    king.UnderAttack -= soldier.KingUnderAttack;
-                    army.Remove(soldier);
+                    if (soldier.Health == 1)
+                    {
+                        king.UnderAttack -= soldier.KingUnderAttack;
+                        army.Remove(soldier);
+                    }
+                    else
+                    {
+                        soldier.LostALife();
+                    }
                     break;
                 case "Attack":
                     king.OnUnderAttack();

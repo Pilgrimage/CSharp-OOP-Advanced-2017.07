@@ -9,5 +9,13 @@ public abstract class Soldier
 
     public string Name { get; private set; }
 
+    public int Health { get; protected set; }
+
+    public void LostALife()
+    {
+        this.Health--;
+
+    }
+
     public abstract void KingUnderAttack(object sender, EventArgs e);
 }

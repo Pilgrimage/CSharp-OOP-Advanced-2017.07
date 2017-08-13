@@ -18,6 +18,8 @@
             Assert.AreEqual(16, db.Capacity, "Capacity must be 16");
         }
 
+        // Test of the constructor
+        
         [Test]
         [TestCase(1)]
         [TestCase(6)]
@@ -62,6 +64,7 @@
             Assert.Throws<ArgumentNullException>(() => new Database(null), "Database cannot be initilized with null");
         }
 
+
         [Test]
         public void DatebaseElementsReturnsValidCollection()
         {
@@ -72,6 +75,8 @@
             CollectionAssert.AreEqual(new int[] { 1, 2, 3 }, db.Elements);
             Assert.AreEqual(3, db.Count, string.Format(ErrorMessageForDifferentCount, 3));
         }
+
+        // Test of adding elements
 
         [Test]
         public void DatabaseAddElement()
@@ -145,6 +150,8 @@
             CollectionAssert.AreEqual(new int[] { 1, 2, 3, 4 }, db.Elements);
         }
 
+        // Test the removing of elements
+
         [Test]
         public void RemoveSingleElement()
         {
@@ -186,6 +193,8 @@
             //Assert
             Assert.Throws<InvalidOperationException>(() => db.Remove());
         }
+
+
 
     }
 }

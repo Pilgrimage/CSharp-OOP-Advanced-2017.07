@@ -2,7 +2,7 @@
 
 public abstract class Soldier
 {
-    public Soldier(string name)
+    protected Soldier(string name)
     {
         this.Name = name;
     }

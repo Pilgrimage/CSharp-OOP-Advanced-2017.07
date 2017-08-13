@@ -1,120 +1,134 @@
-﻿namespace p02_ExtendedDatabase
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace p02_ExtendedDatabase
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-
-    public class ExtendedDatabase
+    public class ExtendedDatabase : IEnumerable<Person>
     {
-        private const int DefaultCapacity = 16;
-        private Person[] elements;
-        private int currentIndex;
+        private const int Capacity = 16;
 
-        public ExtendedDatabase(IEnumerable<Person> elements)
+        private Person[] data;
+        private int count;
+
+        public ExtendedDatabase(params Person[] items)
         {
-            this.Elements = elements.ToArray();
-        }
-
-        public Person[] Elements
-        {
-            get
+            this.data = new Person[Capacity];
+            foreach (var item in items)
             {
-                List<Person> numbers = new List<Person>();
-                for (int i = 0; i < this.currentIndex; i++)
-                {
-                    numbers.Add(elements[i]);
-                }
-
-                return numbers.ToArray();
-            }
-            private set
-            {
-                if (value.Length > 16 || value.Length < 1)
-                {
-                    throw new InvalidOperationException();
-                }
-
-                this.elements = new Person[DefaultCapacity];
-                int bufferIndex = 0;
-
-                foreach (Person element in value)
-                {
-                    this.elements[bufferIndex++] = element;
-                }
-
-                this.currentIndex = value.Length;
+                this.Add(item);
             }
         }
 
-        public int Capacity
+        public int Count { get { return this.count; } }
+
+        public void Add(Person person)
         {
-            get { return DefaultCapacity; }
+            if (this.count == Capacity)
+            {
+                throw new InvalidOperationException("Database is full!");
+            }
+
+            if (PersonExists(person))
+            {
+                throw new InvalidOperationException("Person already exists!");
+            }
+
+            this.data[this.count] = person;
+            this.count++;
         }
 
-        public int Count
+        private bool PersonExists(Person person)
         {
-            get { return this.currentIndex; }
+            if (this.Count == 0)
+            {
+                return false;
+            }
+
+            return this.data.Where(x => x != null).Any(p => p.Id == person.Id || p.Username == person.Username);
         }
 
-        public void Add(Person element)
+        private bool PersonExists(string username)
         {
-            if (this.currentIndex == DefaultCapacity)
+            if (this.Count == 0)
             {
-                throw new InvalidOperationException("Cannot add more elements in the database.");
+                return false;
             }
-            if (this.Elements.FirstOrDefault(p => p.Id == element.Id) != null)
-            {
-                throw new InvalidOperationException("Person with that id is already in the database.");
-            }
-            if (this.Elements.FirstOrDefault(p => p.Username == element.Username) != null)
-            {
-                throw new InvalidOperationException("Person with that username is already in the database.");
-            }
-            this.elements[currentIndex] = element;
-            currentIndex++;
+
+            return this.data.Where(x => x != null).Any(p => p.Username == username);
         }
 
-        public void Remove()
+        private bool PersonExists(long id)
         {
-            if (this.currentIndex == 0)
+            if (this.Count == 0)
             {
-                throw new InvalidOperationException("Cannot remove element from empty database!");
+                return false;
             }
 
-            this.elements[currentIndex] = default(Person);
-            currentIndex--;
+            return this.data.Where(x => x != null).Any(p => p.Id == id);
+        }
+
+        public Person Remove()
+        {
+            if (this.count == 0)
+            {
+                throw new InvalidOperationException("Database is empty!");
+            }
+
+            Person item = this.data[this.count - 1];
+            this.data[this.count - 1] = default(Person);
+            this.count--;
+            return item;
+        }
+
+        public Person[] Fetch()
+        {
+            Person[] result = new Person[this.count];
+            Array.Copy(this.data, result, this.count);
+
+            return result;
+        }
+
+        public Person FindByUsername(string username)
+        {
+            if (string.IsNullOrEmpty(username))
+            {
+                throw new ArgumentNullException(string.Empty, "Username cannot be empty!");
+            }
+            if (!PersonExists(username))
+            {
+                throw new InvalidOperationException("Person does not exists in the database!");
+            }
+
+            return this.data.First(p => p.Username == username);
         }
 
         public Person FindById(long id)
         {
             if (id < 0)
             {
-                throw new ArgumentOutOfRangeException("Id must be a positive number!");
+                throw new ArgumentOutOfRangeException(string.Empty, "Id cannot be a negative number!");
             }
-
-            Person person = this.Elements.FirstOrDefault(x => x.Id == id);
-            if (person == null)
+            if (!PersonExists(id))
             {
-                throw new InvalidOperationException("User with id: " + id + " was not found!");
+                throw new InvalidOperationException("Person does not exists in the database!");
             }
 
-            return person;
+            return this.data.First(p => p.Id == id);
         }
 
-        public Person FindByUsername(string username)
+        public IEnumerator<Person> GetEnumerator()
         {
-            if (username == null)
+            for (int i = 0; i < this.count; i++)
             {
-                throw new ArgumentNullException("Username cannot be null");
+                yield return data[i];
             }
+        }
 
-            Person person = this.Elements.FirstOrDefault(x => x.Username == username);
-            if (person == null)
-            {
-                throw new InvalidOperationException("User with username: " + username + " was not found!");
-            }
-
-            return person;
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
         }
     }
 }

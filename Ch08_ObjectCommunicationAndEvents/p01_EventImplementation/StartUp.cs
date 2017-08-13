@@ -1,5 +1,4 @@
 ﻿using System;
-using p01_EventImplementation;
 
 public class StartUp
 {

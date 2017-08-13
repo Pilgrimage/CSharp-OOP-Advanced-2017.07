@@ -1,28 +1,29 @@
-﻿//namespace p01_EventImplementation
-//{
-    public delegate void NameChangeEventHandler(object sender, NameChangeEventArgs e);
+﻿// Delegates are out of class (in namespace)
+public delegate void NameChangeEventHandler(object sender, NameChangeEventArgs e);
 
-    public class Dispatcher
+public class Dispatcher
+{
+    private string name;
+    public event NameChangeEventHandler NameChange;
+
+    public string Name
     {
-        private string name;
-        public event NameChangeEventHandler NameChange;
-
-        public string Name
+        get { return this.name; }
+        set
         {
-            get { return this.name; }
-            set
-            {
-                this.name = value;
-                OnNameChange(new NameChangeEventArgs(value));
-            }
-        }
-
-        private void OnNameChange(NameChangeEventArgs e)
-        {
-            if (NameChange != null)
-            {
-                NameChange(this, e);
-            }
+            this.name = value;
+            OnNameChange(new NameChangeEventArgs(value));
         }
     }
-//}
+
+    private void OnNameChange(NameChangeEventArgs e)
+    {
+        this.NameChange?.Invoke(this, e);
+
+        // This is the same!:
+        //if (this.NameChange != null)
+        //{
+        //    this.NameChange(this, e);
+        //}
+    }
+}
